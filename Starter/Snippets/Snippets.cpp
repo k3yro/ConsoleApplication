@@ -2,8 +2,6 @@
 #include <stdio.h> /*Zufallszahlen*/
 #include <time.h> /*Zufallszahlen*/
 
-#pragma execution_character_set( "utf-8" )
-
 using namespace std;
 
 void Zufallszahlen();
