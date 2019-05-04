@@ -4,7 +4,6 @@ using namespace std;
 
 //Definitionen
 typedef unsigned int uint;
-typedef char* string;
 
 //Uebergabe Zeiger an Funktion
 void setVariable1(int* pntVar1);
@@ -26,7 +25,7 @@ int main()
 	cout << "Speicheraddresse: " << &variable_1/* Analog: pointer_1 */ << endl; 
 
 	//Wertzuweisung
-	variable_1 = 42; //Analog: *pointer_1 = 45;
+	variable_1 = 42; //Analog: *pointer_1 = 42;
 	cout << "Wert: " << variable_1 << endl << endl; 
 
 	//Funktionsuebergabe
