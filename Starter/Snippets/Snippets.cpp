@@ -2,6 +2,13 @@
 #include <stdio.h> /*Zufallszahlen*/
 #include <time.h> /*Zufallszahlen*/
 
+#ifdef _DEBUG
+	#define DEBUG
+#else
+	#define RELEASE
+#endif // DEBUG
+
+
 using namespace std;
 
 void Strings();
@@ -9,6 +16,10 @@ void Zufallszahlen();
 
 int main()
 {
+#ifdef DEBUG
+	std::cout << "Programm started in debug mode @ Line: " << __LINE__ << std::endl << std::endl;
+#endif
+
 	Strings();
 	//Zufallszahlen();
 	return 0;
