@@ -7,8 +7,8 @@
 Fahrzeug::Fahrzeug()
 {
 	//  geschwindigkeit = 0.0f;
-	geschwindigkeit = 0.0f;
-	position = 0.0f;
+	geschwindigkeit = 0.3f;
+	position = 0.2f;
 }
 
 
