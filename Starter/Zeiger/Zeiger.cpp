@@ -59,6 +59,14 @@ int main()
 		cout << "Element "<< i << ": " << array_2[i] << endl;
 	}
 
+	//Referenzen
+	cout << endl << "Referenzen:" << endl;
+	int x = 42;
+	int& referenz_1 = x; //Referenz
+	cout  << "Referenz:" << x << endl;
+
+
+
 	return 0;
 }
 
