@@ -29,6 +29,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "cBibliothek", "cBibliothek\
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "OperatorenUeberladen", "OperatorenUeberladen\OperatorenUeberladen.vcxproj", "{D86E8AD3-354A-438C-B53E-FE2150FEA815}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "KopierKonstruktor", "KopierKonstruktor\KopierKonstruktor.vcxproj", "{344C1DD6-2591-4A82-B40D-199BB2EA3F5F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -141,6 +143,14 @@ Global
 		{D86E8AD3-354A-438C-B53E-FE2150FEA815}.Release|x64.Build.0 = Release|x64
 		{D86E8AD3-354A-438C-B53E-FE2150FEA815}.Release|x86.ActiveCfg = Release|Win32
 		{D86E8AD3-354A-438C-B53E-FE2150FEA815}.Release|x86.Build.0 = Release|Win32
+		{344C1DD6-2591-4A82-B40D-199BB2EA3F5F}.Debug|x64.ActiveCfg = Debug|x64
+		{344C1DD6-2591-4A82-B40D-199BB2EA3F5F}.Debug|x64.Build.0 = Debug|x64
+		{344C1DD6-2591-4A82-B40D-199BB2EA3F5F}.Debug|x86.ActiveCfg = Debug|Win32
+		{344C1DD6-2591-4A82-B40D-199BB2EA3F5F}.Debug|x86.Build.0 = Debug|Win32
+		{344C1DD6-2591-4A82-B40D-199BB2EA3F5F}.Release|x64.ActiveCfg = Release|x64
+		{344C1DD6-2591-4A82-B40D-199BB2EA3F5F}.Release|x64.Build.0 = Release|x64
+		{344C1DD6-2591-4A82-B40D-199BB2EA3F5F}.Release|x86.ActiveCfg = Release|Win32
+		{344C1DD6-2591-4A82-B40D-199BB2EA3F5F}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
