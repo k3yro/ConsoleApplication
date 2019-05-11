@@ -123,15 +123,23 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="Amphibienfahrzeug.h" />
     <ClInclude Include="Auto.h" />
     <ClInclude Include="Bus.h" />
     <ClInclude Include="Fahrzeug.h" />
+    <ClInclude Include="Landfahrzeug.h" />
+    <ClInclude Include="Spezialfahrzeug.h" />
+    <ClInclude Include="Wasserfahrzeug.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="Amphibienfahrzeug.cpp" />
     <ClCompile Include="Auto.cpp" />
     <ClCompile Include="Bus.cpp" />
     <ClCompile Include="Fahrzeug.cpp" />
+    <ClCompile Include="Landfahrzeug.cpp" />
     <ClCompile Include="Main.cpp" />
+    <ClCompile Include="Spezialfahrzeug.cpp" />
+    <ClCompile Include="Wasserfahrzeug.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

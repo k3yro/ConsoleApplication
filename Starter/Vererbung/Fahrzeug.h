@@ -1,6 +1,6 @@
 #include <string>
 #pragma once
-class Fahrzeug
+class Fahrzeug abstract /*pure virtual*/ /*Alternativ: virtual std::string getType() = 0;*/
 {
 protected:/*wie private, aber vererbbar!*/
 	float geschwindigkeit;
@@ -30,6 +30,6 @@ public:
 		return this->position;
 	}
 
-	virtual std::string getType();
+	virtual std::string getType() =0/*Erbende Objekte muessen dadurch ueberschrieben werden!*/; //<- pure virtual
 };
 

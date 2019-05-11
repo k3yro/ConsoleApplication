@@ -1,14 +1,19 @@
 #include <iostream>
 #include "Fahrzeug.h"
+#include "Amphibienfahrzeug.h"
 #include "Auto.h"
 #include "Bus.h"
 
 int main()
 {
+	//Grundsaetzlich: Vererbung nur bei "ist", nicht bei "hat". 
+	//Bsp: Auto "ist" ein Fahrzeug, aber: Auto "hat" Raeder.
+	// -> Raeder sollte nicht erben, sondern eigene Klasse sein.
+
 	//Vererbung
 	std::cout << "Vererbung" << std::endl; 
 	std::cout << "=========" << std::endl;
-	Fahrzeug* fzg = new Fahrzeug();
+	//Fahrzeug* fzg = new Fahrzeug();
 	Bus* bus1 = new Bus;
 
 	bus1->setPosition(2.4f);
@@ -21,8 +26,8 @@ int main()
 	//std::cout << c1->geschwindigkeit << std::endl; //<- protected
 	std::cout << bus1->getPosition() << std::endl << std::endl;
 
-	delete fzg, bus1, c1;
-	fzg = nullptr;
+	//delete fzg, bus1, c1;
+	//fzg = nullptr;
 	bus1 = nullptr;
 	c1 = nullptr;
 
@@ -35,9 +40,9 @@ int main()
 		Fahrzeug* fahrzeuge[3];
 		fahrzeuge[0] = new Bus();
 		fahrzeuge[1] = new Auto();
-		fahrzeuge[2] = new Fahrzeug();
+		//fahrzeuge[2] = new Fahrzeug();
 
-		for (size_t i = 0; i < 3; i++)
+		for (size_t i = 0; i < 2; i++)
 		{
 			if (nullptr != fahrzeuge[i])
 			{
@@ -47,6 +52,24 @@ int main()
 
 			}
 		}
+		break; //<- fuer MemoryLeak -Test auskommentieren
 	}
+
+	//Mehrfachvererbung
+	std::cout << std::endl << "Mehrfachvererbung" << std::endl;
+	std::cout << "=================" << std::endl;
+
+	Amphibienfahrzeug a;
+
+	std::cout << a.Wasserfahrzeug::maxKmh << std::endl;
+	std::cout << a.Landfahrzeug::maxKmh << std::endl;
+
+	//deadly diamond of death (Nicht machen!):
+	a.Wasserfahrzeug::name = "meinWasserfahrzeug";
+	a.Landfahrzeug::name = "meinLandfahrzeug";
+
+	std::cout << a.Wasserfahrzeug::name << std::endl;
+	std::cout << a.Landfahrzeug::name << std::endl;
+
 	return 0;
 }
