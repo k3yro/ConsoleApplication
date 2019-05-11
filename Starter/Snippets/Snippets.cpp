@@ -11,9 +11,34 @@
 
 using namespace std;
 
+struct GroessenTest1
+{
+	int i1;
+	short s1;
+	int i2;
+	short s2;
+};
+
+struct GroessenTest2
+{
+	int i1;
+	int i2;
+	short s1;
+	short s2;
+};
+
+struct GroessenTest3
+{
+	short s1;
+	short s2;
+	int i1;
+	int i2;	
+};
+
 void Strings();
 void Arrays();
 void Zufallszahlen();
+int* GanzBoeseFunktion();
 
 int main()
 {
@@ -22,10 +47,32 @@ int main()
 #endif
 
 	//Strings();
+
+	//Arrays();
+
 	//Zufallszahlen();
 
-	Arrays();
+	//Zeiger Fail:
+	int* nichtNachMachen = GanzBoeseFunktion();
+	std::cout << "nichtNachMachen: " << *nichtNachMachen << std::endl; //Wert koennte ueberschrieben werden
+	std::cout << "nichtNachMachen: " << *nichtNachMachen << std::endl; //Wert koennte ueberschrieben werden
+
+	//Speicheroptimierung (Alignment)
+	std::cout << "sizeof short: " << sizeof(short) << std::endl;
+	std::cout << "sizeof int: " << sizeof(int) << std::endl;
+	std::cout << "sizeof GroessenTest1: " << sizeof(GroessenTest1) << std::endl;
+	std::cout << "sizeof GroessenTest2: " << sizeof(GroessenTest2) << std::endl;
+	std::cout << "sizeof GroessenTest3: " << sizeof(GroessenTest3) << std::endl;
+	std::cout << "alignment of short: " << std::alignment_of<short>() << std::endl;
+	//...
+
 	return 0;
+}
+
+int* GanzBoeseFunktion() 
+{
+	int zahl = 27;
+	return &zahl;
 }
 
 void Strings()
