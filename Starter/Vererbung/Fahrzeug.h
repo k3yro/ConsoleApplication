@@ -2,14 +2,14 @@
 #pragma once
 class Fahrzeug
 {
-protected:
+protected:/*wie private, aber vererbbar!*/
 	float geschwindigkeit;
 private:
 	
 public:
 	float position;
 	Fahrzeug();
-	~Fahrzeug();
+	virtual ~Fahrzeug();
 	void fahre(float line);
 
 	void setGeschwindigkeit(float kmh)
@@ -30,6 +30,6 @@ public:
 		return this->position;
 	}
 
-	std::string getType();
+	virtual std::string getType();
 };
 

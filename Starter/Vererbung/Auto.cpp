@@ -4,11 +4,16 @@
 
 Auto::Auto()
 {
+	geschwindigkeit = 1;
+
+	bus = new Bus;
 }
 
 
 Auto::~Auto()
 {
+	delete bus;
+	bus = nullptr;
 }
 
 
@@ -34,5 +39,5 @@ void Auto::beschleunige(float neueGeschwindigkeit)
 std::string Auto::getType()
 {
 	// TODO: Fügen Sie hier Ihren Implementierungscode ein..
-	return std::string();
+	return "Auto";
 }

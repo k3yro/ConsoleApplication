@@ -6,7 +6,7 @@ public:
 	Bus();
 	~Bus();
 
-	std::string getType();
+	std::string getType() override;
 private:
 
 };
