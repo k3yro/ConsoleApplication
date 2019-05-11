@@ -12,6 +12,7 @@
 using namespace std;
 
 void Strings();
+void Arrays();
 void Zufallszahlen();
 
 int main()
@@ -20,8 +21,10 @@ int main()
 	std::cout << "Programm started in debug mode @ Line: " << __LINE__ << std::endl << std::endl;
 #endif
 
-	Strings();
+	//Strings();
 	//Zufallszahlen();
+
+	Arrays();
 	return 0;
 }
 
@@ -56,6 +59,12 @@ void Strings()
 	cout << "Letztes Zeichen: " << string_02.at(string_02.length() -1) << endl;
 	cout << endl;
 	system(string_02.c_str());
+}
+
+void Arrays() 
+{
+	int* array = new int[100];
+	delete[] array;
 }
 
 void Zufallszahlen()
