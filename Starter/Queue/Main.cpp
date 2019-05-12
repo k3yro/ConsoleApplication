@@ -1,9 +1,9 @@
 #include <iostream>
-#include <queue>
+#include <queue> //fifo
 
 int main() 
 {
-	//Siehe auch: queue | dqueue
+	//Siehe auch: queue | dqueue | stack (lifo)
 	std::priority_queue<int> pQueue;
 	pQueue.push(2);
 	pQueue.push(33);
