@@ -1,6 +1,7 @@
 #include <iostream>
 #include <stdio.h> /*Zufallszahlen*/
 #include <time.h> /*Zufallszahlen*/
+#include <array>
 
 #ifdef _DEBUG
 	#define DEBUG
@@ -65,6 +66,18 @@ int main()
 	std::cout << "sizeof GroessenTest3: " << sizeof(GroessenTest3) << std::endl;
 	std::cout << "alignment of short: " << std::alignment_of<short>() << std::endl;
 	//...
+
+	//Standard Array
+	std::array<int, 10> elements;
+
+	for (size_t i = 0; i < elements.size(); i++)
+	{
+		elements[i] = i+1;
+	}
+	for (size_t i = 0; i < elements.size(); i++)
+	{
+		std::cout << elements[i] << std::endl;
+	}
 
 	return 0;
 }
