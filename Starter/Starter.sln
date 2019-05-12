@@ -49,6 +49,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Casting", "Casting\Casting.
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "FileStream", "FileStream\FileStream.vcxproj", "{EA4B58A2-9A9A-4BC4-B4DB-9DCB9B08008C}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "StringStream", "StringStream\StringStream.vcxproj", "{22B7F153-08AD-4FCF-9EAD-6D18D5754614}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -241,6 +243,14 @@ Global
 		{EA4B58A2-9A9A-4BC4-B4DB-9DCB9B08008C}.Release|x64.Build.0 = Release|x64
 		{EA4B58A2-9A9A-4BC4-B4DB-9DCB9B08008C}.Release|x86.ActiveCfg = Release|Win32
 		{EA4B58A2-9A9A-4BC4-B4DB-9DCB9B08008C}.Release|x86.Build.0 = Release|Win32
+		{22B7F153-08AD-4FCF-9EAD-6D18D5754614}.Debug|x64.ActiveCfg = Debug|x64
+		{22B7F153-08AD-4FCF-9EAD-6D18D5754614}.Debug|x64.Build.0 = Debug|x64
+		{22B7F153-08AD-4FCF-9EAD-6D18D5754614}.Debug|x86.ActiveCfg = Debug|Win32
+		{22B7F153-08AD-4FCF-9EAD-6D18D5754614}.Debug|x86.Build.0 = Debug|Win32
+		{22B7F153-08AD-4FCF-9EAD-6D18D5754614}.Release|x64.ActiveCfg = Release|x64
+		{22B7F153-08AD-4FCF-9EAD-6D18D5754614}.Release|x64.Build.0 = Release|x64
+		{22B7F153-08AD-4FCF-9EAD-6D18D5754614}.Release|x86.ActiveCfg = Release|Win32
+		{22B7F153-08AD-4FCF-9EAD-6D18D5754614}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
