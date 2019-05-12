@@ -24,11 +24,22 @@ int main()
 	numbers.reserve(17);
 	std::cout << "Capacity: " << numbers.capacity() << std::endl;
 	
-	numbers.resize(20, 1);
+	//numbers.resize(20, 1);
 	std::cout << "Capacity: " << numbers.capacity() << std::endl;
 
 	for (size_t i = 0; i < numbers.size(); i++)
 	{
-		std::cout << numbers[i] << std::endl;
+	//	std::cout << numbers[i] << std::endl;
+	}
+
+	for (auto i = numbers.cbegin(); i < numbers.cend(); i++)
+	{
+		std::cout << *i << std::endl;
+		//*i = 42;
+	}
+
+	for (auto i = numbers.crbegin(); i < numbers.crend(); i++)
+	{
+		std::cout << *i << std::endl;
 	}
 }
