@@ -3,6 +3,7 @@
 #include <chrono> //Zeitfunktionen fuer sleep -Angaben
 #include <mutex>
 #include <atomic>
+#include <future>
 
 std::mutex mutex1;
 std::mutex mutex2;
@@ -69,6 +70,25 @@ void process()
 	}
 }
 
+// Future:
+int doCalculation()
+{
+	std::this_thread::sleep_for(std::chrono::seconds(1));
+	return 27;
+}
+
+//Promise:
+void present(std::future<float> future)
+{
+	//Abfragen ob Future fertig ist:
+	if (future.wait_for(std::chrono::nanoseconds(0)) == std::future_status::ready)
+	{
+		// ...fertig
+	}
+	float result = future.get();
+	std::cout << "Presenter: " << result << std::endl;
+}
+
 int main()
 {
 	std::thread processing1(process);
@@ -96,9 +116,25 @@ int main()
 	printNumberThread2.join();
 	printNumberThread3.join();
 
-
-	system("PAUSE");
 	stop = true;
 	processing1.join();
+
+	//Future:
+	//Berechnung starten:
+	std::future<int> future = std::async(doCalculation);
+
+	//... weiterer code
+
+	//Ergebnis der Berechnung abfragen oder ggf. drauf warten:
+	int result = future.get();
+
+	//...weiterer code mit result wert
+	std::cout << "Future Result: " << result << std::endl;
+
+	//Promise:
+	std::promise<float> promise;
+	std::thread presenterThread = std::thread(present, promise.get_future());
+	promise.set_value(12.34f);
+	presenterThread.join();
 	return 0;
 }
