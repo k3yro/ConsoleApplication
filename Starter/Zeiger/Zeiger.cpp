@@ -1,4 +1,5 @@
 #include <iostream>
+#include <memory>
 
 using namespace std;
 
@@ -10,6 +11,16 @@ void setVariable1(int* pntVar1);
 
 //Funktion mit 2 Rueckgabewerten:
 int euklidischeDivision(uint divident, uint divisor, uint* quotient, uint* rest);
+
+//Testklasse fuer SmartPointer:
+class TestClass
+{
+public:
+	~TestClass()
+	{
+		std::cout << "Destructor Smartpointer TestClass" << std::endl;
+	}
+};
 
 /*
 pointer_1 = Zeiger auf Variable
@@ -65,10 +76,35 @@ int main()
 	int& referenz_1 = x; //Referenz
 	cout  << "Referenz:" << x << endl;
 
+	// Smartpointer:
+	{
+		//Alter C Pointer:
+		TestClass* oldCpointer = new TestClass(); // Ohne delete -> Mem leak!
+		delete oldCpointer;
 
+		//Unique Pointer (nur ein Zeiger, nicht mehrere):
+		std::unique_ptr<TestClass> sptr01(new TestClass()); //Zeiger wird selbsstaendig geloescht beim Verlassen des Blocks
+		
+		//Shared Pointer (Mehrer Zeiger moeglich):
+		std::shared_ptr<TestClass> sptr02(new TestClass());
+		std::shared_ptr<TestClass> sptr03(sptr02);
+		std::cout << sptr02.use_count() << std::endl; //(Kleiner Performace Overhead durch Hochzaehlung von use_count)
 
+		//Weak Pointer (loesen Proebleme der zyklischen Abhaengigkeit (ptr1 zeigt auf ptr2 .. ptr3 zeigt auf ptr1):
+		std::weak_ptr<TestClass> sptr04(sptr02);
+		std::cout << sptr02.use_count() << std::endl; //count wird nicht erhoeht. keine abhaengigkeit.
+		//Aber: WeakPointer koennte jederzeit Null sein
+		std::cout << sptr04.expired() << std::endl;	//prueft ob WP null ist
+
+		//Weak in Shared umwandeln:
+		std::shared_ptr<TestClass> sptr05 = sptr04.lock();
+		sptr05.reset();
+
+	}
 	return 0;
 }
+
+
 
 void setVariable1(int *pntVar1)
 {
