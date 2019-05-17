@@ -55,6 +55,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "BinaereOperationen", "Binae
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Lambdas", "Lambdas\Lambdas.vcxproj", "{D49D0FB9-C104-4E23-9D57-2814BF688509}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Multithreading", "Multithreading\Multithreading.vcxproj", "{826E9399-B992-488E-8C4D-FDF2AE883179}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -271,6 +273,14 @@ Global
 		{D49D0FB9-C104-4E23-9D57-2814BF688509}.Release|x64.Build.0 = Release|x64
 		{D49D0FB9-C104-4E23-9D57-2814BF688509}.Release|x86.ActiveCfg = Release|Win32
 		{D49D0FB9-C104-4E23-9D57-2814BF688509}.Release|x86.Build.0 = Release|Win32
+		{826E9399-B992-488E-8C4D-FDF2AE883179}.Debug|x64.ActiveCfg = Debug|x64
+		{826E9399-B992-488E-8C4D-FDF2AE883179}.Debug|x64.Build.0 = Debug|x64
+		{826E9399-B992-488E-8C4D-FDF2AE883179}.Debug|x86.ActiveCfg = Debug|Win32
+		{826E9399-B992-488E-8C4D-FDF2AE883179}.Debug|x86.Build.0 = Debug|Win32
+		{826E9399-B992-488E-8C4D-FDF2AE883179}.Release|x64.ActiveCfg = Release|x64
+		{826E9399-B992-488E-8C4D-FDF2AE883179}.Release|x64.Build.0 = Release|x64
+		{826E9399-B992-488E-8C4D-FDF2AE883179}.Release|x86.ActiveCfg = Release|Win32
+		{826E9399-B992-488E-8C4D-FDF2AE883179}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
