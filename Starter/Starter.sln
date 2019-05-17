@@ -57,6 +57,13 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Lambdas", "Lambdas\Lambdas.
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Multithreading", "Multithreading\Multithreading.vcxproj", "{826E9399-B992-488E-8C4D-FDF2AE883179}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "OwnLibary", "OwnLibary\OwnLibary.vcxproj", "{16BEDECE-7AF0-4318-B93A-D8468187E8B1}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "OwnLibaryAccess", "OwnLibaryAccess\OwnLibaryAccess.vcxproj", "{D1C91468-994B-4DA4-A46A-9565722F1CC1}"
+	ProjectSection(ProjectDependencies) = postProject
+		{16BEDECE-7AF0-4318-B93A-D8468187E8B1} = {16BEDECE-7AF0-4318-B93A-D8468187E8B1}
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -281,6 +288,22 @@ Global
 		{826E9399-B992-488E-8C4D-FDF2AE883179}.Release|x64.Build.0 = Release|x64
 		{826E9399-B992-488E-8C4D-FDF2AE883179}.Release|x86.ActiveCfg = Release|Win32
 		{826E9399-B992-488E-8C4D-FDF2AE883179}.Release|x86.Build.0 = Release|Win32
+		{16BEDECE-7AF0-4318-B93A-D8468187E8B1}.Debug|x64.ActiveCfg = Debug|x64
+		{16BEDECE-7AF0-4318-B93A-D8468187E8B1}.Debug|x64.Build.0 = Debug|x64
+		{16BEDECE-7AF0-4318-B93A-D8468187E8B1}.Debug|x86.ActiveCfg = Debug|Win32
+		{16BEDECE-7AF0-4318-B93A-D8468187E8B1}.Debug|x86.Build.0 = Debug|Win32
+		{16BEDECE-7AF0-4318-B93A-D8468187E8B1}.Release|x64.ActiveCfg = Release|x64
+		{16BEDECE-7AF0-4318-B93A-D8468187E8B1}.Release|x64.Build.0 = Release|x64
+		{16BEDECE-7AF0-4318-B93A-D8468187E8B1}.Release|x86.ActiveCfg = Release|Win32
+		{16BEDECE-7AF0-4318-B93A-D8468187E8B1}.Release|x86.Build.0 = Release|Win32
+		{D1C91468-994B-4DA4-A46A-9565722F1CC1}.Debug|x64.ActiveCfg = Debug|x64
+		{D1C91468-994B-4DA4-A46A-9565722F1CC1}.Debug|x64.Build.0 = Debug|x64
+		{D1C91468-994B-4DA4-A46A-9565722F1CC1}.Debug|x86.ActiveCfg = Debug|Win32
+		{D1C91468-994B-4DA4-A46A-9565722F1CC1}.Debug|x86.Build.0 = Debug|Win32
+		{D1C91468-994B-4DA4-A46A-9565722F1CC1}.Release|x64.ActiveCfg = Release|x64
+		{D1C91468-994B-4DA4-A46A-9565722F1CC1}.Release|x64.Build.0 = Release|x64
+		{D1C91468-994B-4DA4-A46A-9565722F1CC1}.Release|x86.ActiveCfg = Release|Win32
+		{D1C91468-994B-4DA4-A46A-9565722F1CC1}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
