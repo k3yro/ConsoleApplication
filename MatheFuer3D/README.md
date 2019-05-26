@@ -9,5 +9,12 @@ Kleine C++ Header-only Library für 3D Berechnungen.
 - Vektor normalisieren
 - Punktprodukt/Skalarprodukt
 
-## Ausführen
+## Befehle
+### Kompilieren, Aufräumen und Ausführen
 $ make
+### Kompilieren
+$ make compile
+### Aufräumen
+$ make clean
+### Ausführen
+$ make run
