@@ -5,6 +5,7 @@
 #include "./vek3.hpp"
 
 namespace k3math {
+    // union fuer Koords und Farben
     union vek4 {
         struct {
             float r;

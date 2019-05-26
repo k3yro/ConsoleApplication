@@ -4,6 +4,7 @@
 #include "./vek2.hpp"
 
 namespace k3math {
+    //Todo: union fuer u,v,w (siehe vek2)
     struct vek3 {
         float x;
         float y;
@@ -27,16 +28,18 @@ namespace k3math {
             this->z = z;
         }
 
+        // Konstr. 4... vek3 kann einen vek2 engegennehmen
         vek3(const vek2& v2) {
             this->x = v2.x;
             this->y = v2.y;
-            this->z = 0.0f;
+            this->z = 0.0f; // z wird auf 0 gesetzt
         }
 
+        // Konstr. 5... wie Konstr 4 mit value fuer z
         vek3(const vek2& v2, float value) {
             this->x = v2.x;
             this->y = v2.y;
-            this->z = value;
+            this->z = value; // z wird auf value gesetzt
         }
 
         float& operator [] (size_t i) {
@@ -101,6 +104,8 @@ namespace k3math {
         }
 
         float sqrLength() const {
+            // Eweiterter Pythagoras (x² + y² + z²)
+            // Fuer alles Dimensionen erweiterbar (x² + y² + ... + n²)
             return this->x * this->x + this->y * this->y + this->z * this->z;
         }
 
