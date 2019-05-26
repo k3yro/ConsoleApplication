@@ -36,14 +36,14 @@ int main(int argc, char** argv)
         std::cout << "2D Subtraktion:" << std::endl;
         print(pos3);
 
-        // Multiplikation
+        // Multiplikation mit Skalar
         pos3 = pos2 * 2;
-        std::cout << "2D Multiplikation:" << std::endl;
+        std::cout << "2D Multiplikation mit Skalar:" << std::endl;
         print(pos3);
 
-        // Division
+        // Division mit Skalar
         pos3 = pos2 / 2;
-        std::cout << "2D Division:" << std::endl;
+        std::cout << "2D Division mit Skalar:" << std::endl;
         print(pos3);
 
         // Normalisierung
