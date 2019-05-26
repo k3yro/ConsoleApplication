@@ -5,6 +5,8 @@ Kleine C++ Header-only Library für 3D Berechnungen.
 ## Berechnungen
 - Vektoraddition
 - Vektorsubtraktion
+- Multiplikation mit Skalar
+- Division mit Skalar
 - Vektorlänge
 - Vektor normalisieren
 - Punktprodukt/Skalarprodukt
