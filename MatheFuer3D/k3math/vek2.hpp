@@ -14,25 +14,25 @@ namespace k3math {
             float y;
         };
 
-        // Konstr. 1... ohne Param = x und y = 0.0f;
+        // Konstr. 1 (ohne Param): x, y = 0.0f;
         vek2() {
             this->x = 0.0f;
             this->y = 0.0f;
         }
 
-        // Konstr. 2... 1 Param = x und y = value
+        // Konstr. 2 (1 Param): x, y = value
         vek2(float value) {
             this->x = value;
             this->y = value;
         }
 
-        // Konstr. 3 ...
+        // Konstr. 3 (2 Param): x = x; y = y
         vek2(float x, float y) {
             this->x = x;
             this->y = y;
         }
 
-        // Zugriff mit vec2[0] / vec[1] ermoeglichen
+        // Zugriff mit v[0] / v[1] ermoeglichen
         float& operator [] (size_t i/*0 oder 1*/) {
             // Out of Index?
             assert(i < 2 && i >= 0);
@@ -73,7 +73,7 @@ namespace k3math {
             return vek2(-this->x, -this->y);
         }
 
-        // Multiplikation mit Zahlenwert (kein vekt2!)
+        // Multiplikation mit Zahlenwert (Skalar)
         template<typename T> // verschieden Typen (z.B. float, int, double)
         vek2 operator * (const T& scalar) const {
             return vek2(this->x * scalar, this->y * scalar);
@@ -114,8 +114,7 @@ namespace k3math {
         }
 
         // Vektor normalisieren (Laenge des Vektors ist dann 1)
-        // Vektor zeigt dann in die gleiche Richtung
-        // Verdopplung Normalenvektor in einer Sekunde (Gameloop) == Verdopplung Geschwindigkeit
+        // Verdopplung Normalenvektor in einer Sekunde (Gameloop) bedeutet Verdopplung Geschwindigkeit
         // ---
         // Wird durch vek2& direkt zurueck gegeben,
         // dadurch Kette moeglich: pos1.nomalize() * 3
@@ -142,21 +141,18 @@ namespace k3math {
         //   -  *  -  = 6 + 8 = 14
         //   4     2
         //
-        // Anwendung in Spielen (mit normalisierten Vektoren):
+        // Anwendungen (mit normalisierten Vektoren):
         // -Bestimmung Winkel zwische Vektoren
-        // -Spieler laeuft vor Wand und slidet an ihr entlang
         // -Stehen 2 Vektoren im 90° Winkel aufeinander gilt a*b=0
         // -Zeigen 2 Vektoren in die selbe Richtung gilt a*b=|a|*|b| = 1
-        // -Kann Spieler anderen Spieler sehen (Schaut in die Richtung (Sichtkegel vernachlaessigt)):
-        //      1. Bestimmung Vektor zwischen Spieler 1 und Spieler 2 (Vektorsubtraktion)
-        //      2. Wenn Punktprodukt groesser 0: vor Spieler
-        //      3. Wenn Punktprodukt kleiner 0: hinter Spieler
+        // -Befindet sich Vektor 1 vor Vektor 2 gilt Punktprodukt > 0
+        // -Befindet sich Vektor 1 hinter Vektor 2 gilt Punktprodukt < 0
         //      
         // Notizen:
-        // cos(alpha) = 1 ....0°
-        // cos(alpha) = 0 ...90°
-        // sin(alpha) = 1 ...90°
-        // sin(alpha) = 0 ....0°
+        // cos(alpha) = 1 ....0° (Einheitskreis)
+        // cos(alpha) = 0 ...90° (Einheitskreis)
+        // sin(alpha) = 1 ...90° (Einheitskreis)
+        // sin(alpha) = 0 ....0° (Einheitskreis)
         float dot(vek2& other) { // Weitere Produktoperationen moeglich! Daher dot anstelle ueberladenen * Operator
             return this->x * other.x + this->y * other.y;
         }
