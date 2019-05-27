@@ -1,32 +1,30 @@
 #include <cstdint>
 #include <iostream>
 
-// 2 Werte, eine Speicherbereich
-union {
-	uint16_t sixteenBits;
-	uint8_t twoBytes[2];
-} test_endianness;
+union
+{
+	uint32_t Bits32;
+	uint8_t Bytes4[4];
+} ganzahl32Bit;
 
 /*
 Byte-Reihenfolge des Systems rausfinden
-Quelle: https://de.wikipedia.org/wiki/Byte-Reihenfolge
+Beispiel siehe: https://de.wikipedia.org/wiki/Byte-Reihenfolge#Beispiel:_Speicherung_einer_32_Bit-Ganzzahl_in_4_Bytes
 */
 int main() 
 {
-	// Setze erstes Bit auf 1 und verschiebe es um 15 Stellen
-	// Ergebnis: 1000 0000 0000 0000 (Binaer)
-	test_endianness.sixteenBits = 1 << 15; // 0x8000, 32768
+	ganzahl32Bit.Bits32 = 16909060; //  (0x01020304, 0b0001000000100000001100000100) 
 
-	if (test_endianness.twoBytes[0] != 0) {
-		// Big-Endian:
-		// twoBytes[0] -> 1000 0000 (0x80, 128)
-		// twoBytes[1] -> 0000 0000
+	if (ganzahl32Bit.Bytes4[0] == 1 && ganzahl32Bit.Bytes4[1] == 2 && ganzahl32Bit.Bytes4[2] == 3 && ganzahl32Bit.Bytes4[3] == 4) 
+	{
 		std::cout << "Das Programm laeuft auf einer Big-Endian-Maschine." << std::endl;
 	}
-	else {
-		// Little-Endian:
-		// twoBytes[0] -> 0000 0000
-		// twoBytes[1] -> 1000 0000 (0x80, 128)
+	else if(ganzahl32Bit.Bytes4[0] == 4 && ganzahl32Bit.Bytes4[1] == 3 && ganzahl32Bit.Bytes4[2] == 2 && ganzahl32Bit.Bytes4[3] == 1)
+	{
 		std::cout << "Das Programm laeuft auf einer Little-Endian-Maschine." << std::endl;
+	}
+	else if (ganzahl32Bit.Bytes4[0] == 2 && ganzahl32Bit.Bytes4[1] == 1 && ganzahl32Bit.Bytes4[2] == 4 && ganzahl32Bit.Bytes4[3] == 3)
+	{
+		std::cout << "Das Programm laeuft auf einer Mixed-Endian-Maschine." << std::endl;
 	}
 } 
