@@ -64,6 +64,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "OwnLibaryAccess", "OwnLibar
 		{16BEDECE-7AF0-4318-B93A-D8468187E8B1} = {16BEDECE-7AF0-4318-B93A-D8468187E8B1}
 	EndProjectSection
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Endianness", "Endianness\Endianness.vcxproj", "{B253A742-809F-43D1-A20A-2DC5834CE9CC}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -304,6 +306,14 @@ Global
 		{D1C91468-994B-4DA4-A46A-9565722F1CC1}.Release|x64.Build.0 = Release|x64
 		{D1C91468-994B-4DA4-A46A-9565722F1CC1}.Release|x86.ActiveCfg = Release|Win32
 		{D1C91468-994B-4DA4-A46A-9565722F1CC1}.Release|x86.Build.0 = Release|Win32
+		{B253A742-809F-43D1-A20A-2DC5834CE9CC}.Debug|x64.ActiveCfg = Debug|x64
+		{B253A742-809F-43D1-A20A-2DC5834CE9CC}.Debug|x64.Build.0 = Debug|x64
+		{B253A742-809F-43D1-A20A-2DC5834CE9CC}.Debug|x86.ActiveCfg = Debug|Win32
+		{B253A742-809F-43D1-A20A-2DC5834CE9CC}.Debug|x86.Build.0 = Debug|Win32
+		{B253A742-809F-43D1-A20A-2DC5834CE9CC}.Release|x64.ActiveCfg = Release|x64
+		{B253A742-809F-43D1-A20A-2DC5834CE9CC}.Release|x64.Build.0 = Release|x64
+		{B253A742-809F-43D1-A20A-2DC5834CE9CC}.Release|x86.ActiveCfg = Release|Win32
+		{B253A742-809F-43D1-A20A-2DC5834CE9CC}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
